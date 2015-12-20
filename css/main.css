@@ -1,0 +1,268 @@
+/*! HTML5 Boilerplate v5.0 | MIT License | http://h5bp.com/ */
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+body {
+  max-height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+.snowman {
+  position: absolute;
+  background-color: #fff;
+/*  background-color: lightskyblue*/
+  background-image: url(../img/loader_snowman.gif);
+  width: 100%;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 2;
+}
+.item {
+  width: 100%;
+  height: 100vh;
+  background-image: url(../img/island.gif);
+  background-repeat: no-repeat;
+  background-position: center 30vh;
+}
+
+.toy-wrap {
+  width: 475px;
+  height: 150px;
+  margin: 15vh auto 0;
+}
+
+.toy {
+  width: 130px;
+  margin-left: 20px;
+  float: left;
+  height: 130px;
+  background-size: 100%;
+}
+
+.toy {
+  -webkit-transition: all 300ms ease-out .5s;
+  -moz-transition: all 300ms ease-out .5s;
+  -o-transition: all 300ms ease-out .5s;
+  transition: all 300ms ease-out .5s;
+}
+
+.toy-wrap.init .toy {
+  -webkit-transform: rotate(-40deg) scale(.5);
+  transform: rotate(-40deg) scale(.5);
+}
+.toy.t1 {
+  background-image: url(../img/toy1.png);
+}
+.toy.t2 {
+  background-image: url(../img/toy2.png);
+}
+.toy.t3 {
+  background-image: url(../img/toy3.png);
+}
+.toy.t4 {
+  background-image: url(../img/toy4.png);
+}
+.toy.t5 {
+  background-image: url(../img/toy5.png);
+}
+.toy.t6 {
+  background-image: url(../img/toy6.png);
+}
+
+.controls {
+  position: fixed;
+  top: 1em;
+  right: 2em;
+  z-index: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   Print styles
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
