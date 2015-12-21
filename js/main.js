@@ -136,9 +136,9 @@ $(document).ready(function(){
   });
 
   owl.on('changed.owl.carousel', function(event) {
+    $(".owl-carousel .item .top").removeClass('animated bounceInLeft');
     $(".owl-carousel .item .top").each(function(index) {
       if (index == event.item.index) {
-        $(this).removeClass('animated bounceInLeft');
         $(this).addClass('animated bounceInLeft');
       }
     });
