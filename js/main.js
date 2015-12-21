@@ -11,6 +11,8 @@ $(document).ready(function(){
     items: 1,
     startPosition: 1,
     URLhashListener: true,
+    animateIn: "rollIn",
+    animateOut: "rollOut"
 //    onInitialized: initSlide,
   });
   
