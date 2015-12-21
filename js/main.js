@@ -11,8 +11,10 @@ $(document).ready(function(){
     items: 1,
     startPosition: 1,
     URLhashListener: true,
-    animateIn: "rollIn",
-    animateOut: "rollOut"
+//    animateIn: "rollIn",
+//    animateOut: "rollOut"
+    animateIn: "rotateInUpLeft",
+    animateOut: "rotateOutUpLeft"
 //    onInitialized: initSlide,
   });
   
@@ -27,7 +29,7 @@ $(document).ready(function(){
 
   var xMasSong = document.getElementById('bg-song');
   xMasSong.addEventListener("canplay", function(e) {
-    e.target.play();
+//    e.target.play();
     initSlide();
     $(".snowman").fadeOut();
   });
