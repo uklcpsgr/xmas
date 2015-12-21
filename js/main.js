@@ -106,11 +106,11 @@ $(document).ready(function(){
   }
   createSlides();
 
-  var initSlide = function() {
-    var toyWraps = document.getElementsByClassName('toy-wrap');
-    // Center slide index should be used.
-    $(toyWraps[1]).removeClass('init');
-  };
+//  var initSlide = function() {
+//    var toyWraps = document.getElementsByClassName('toy-wrap');
+//    // Center slide index should be used.
+//    $(toyWraps[1]).removeClass('init');
+//  };
 
   if (window.location.hash) {
     var hash = window.location.hash.substring(1);
@@ -132,7 +132,10 @@ $(document).ready(function(){
     startPosition: startPosition,
     URLhashListener: true,
     animateIn: "rotateInUpLeft",
-    animateOut: "rotateOutUpLeft"
+    animateOut: "rotateOutUpLeft",
+    onInitialized: function() {
+//      $(".owl-carousel .item .top").addClass('animated bounceInLeft');
+    }
   });
 
   owl.on('changed.owl.carousel', function(event) {
@@ -149,12 +152,12 @@ $(document).ready(function(){
     $(e.target).addClass("active");
   });
 
-  var xMasSong = document.getElementById('bg-song');
-  xMasSong.addEventListener("canplay", function(e) {
-    e.target.play();
-    initSlide();
-    $(".snowman").fadeOut();
-  });
 
   $(document).snowfall({image: "img/snowflake_32.png", minSize: 10, maxSize:32});
+});
+
+$(window).load(function () {
+  document.getElementById("bg-song").play();
+  $(".snowman").fadeOut();
+  $(".owl-carousel .owl-item.active .item .top").addClass('animated bounceInLeft');
 });
