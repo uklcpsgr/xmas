@@ -94,7 +94,7 @@ $(document).ready(function(){
     if (hash === this.name) {
       startPosition = index;
     }
-    $("#control-link-wrap tsapn#" + hash).attr("class", "active");
+    $("#control-link-wrap tspan[data-country='" + hash + "']").attr("class", "active");
   });
 
   var owl = $(".owl-carousel").owlCarousel({
