@@ -58,30 +58,6 @@ $(document).ready(function(){
     }
   ];
 
-  function createControls() {
-    var container = document.getElementById('controls');
-    var controlsContainer = document.createElement('div');
-    var frag = document.createDocumentFragment();
-
-    countries.forEach(function(country) {
-      var name = country.name === 'netherlands' 
-                  ? 'the ' + country.name
-                  : country.name === 'usa'
-                  ? country.name.toUpperCase() 
-                  : country.name;
-      var el = document.createElement('a');
-      el.href = "#" + country.name;
-      el.className = country.name;
-      el.innerHTML = name;
-      
-      frag.appendChild(el);
-    });
-
-    controlsContainer.appendChild(frag);
-    container.appendChild(controlsContainer);
-  }
-  createControls();
-
   function createSlides() {
     var container = document.getElementsByClassName('owl-carousel')[0];
     var frag = document.createDocumentFragment();
@@ -106,12 +82,6 @@ $(document).ready(function(){
   }
   createSlides();
 
-//  var initSlide = function() {
-//    var toyWraps = document.getElementsByClassName('toy-wrap');
-//    // Center slide index should be used.
-//    $(toyWraps[1]).removeClass('init');
-//  };
-
   if (window.location.hash) {
     var hash = window.location.hash.substring(1);
   }
@@ -124,19 +94,15 @@ $(document).ready(function(){
     if (hash === this.name) {
       startPosition = index;
     }
-    $("#controls a." + hash).addClass("active");
+    $("#control-link-wrap tsapn#" + hash).attr("class", "active");
   });
 
   var owl = $(".owl-carousel").owlCarousel({
     items: 1,
     startPosition: startPosition,
     URLhashListener: true,
-    // rotateInUpLeft rotateOutUpLeft
     animateIn: "rollIn",
     animateOut: "rollOut",
-    onInitialized: function() {
-//      $(".owl-carousel .item .top").addClass('animated bounceInLeft');
-    }
   });
 
   owl.on('changed.owl.carousel', function(event) {
@@ -148,11 +114,11 @@ $(document).ready(function(){
     });
   });
 
-  $("#controls a").on("click", function(e) {
-    $(e.target).siblings().removeClass("active");
-    $(e.target).addClass("active");
+  $("#control-link-wrap tspan").on("click", function(e) {
+    $(e.target).siblings().attr("class", "");
+    $(e.target).attr("class", "active");
+    window.location.hash = "#" + $(e.target).attr("data-country");
   });
-
 
   $(document).snowfall({image: "img/snowflake_32.png", minSize: 10, maxSize:32});
 });

@@ -11,15 +11,7 @@
     <link rel="stylesheet" href="css/owl.carousel.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/animate.min.css">
-    <!--<script src="js/snowstorm-min.js"></script>-->
 
-    <script>
-//        snowStorm.snowColor = 'skyblue';
-//        snowStorm.flakesMaxActive = 126;
-//        snowStorm.useTwinkleEffect = true;
-//        snowStorm.flakeBottom = null;
-//        snowStorm.snowCharacter = '❄';
-    </script>
     <!--[if lt IE 9]>
         <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
         <script>window.html5 || document.write('<script src="js/vendor/html5shiv.js"><\/script>')</script>
@@ -34,14 +26,31 @@
     <div class="snowman"></div>
     <div class="owl-carousel"></div>
 
-    <div id="controls"></div>
-<!--        <div class="item" data-hash="ua">&nbsp;
-        <div class="toy-wrap init">
-          <div class="toy left t4"></div>
-          <div class="toy cntr t2"></div>
-          <div class="toy rght t6"></div>
-        </div>
-      </div>-->
+    <div id="controls">
+      <svg height="840" width="840" id="mainSVG">
+        <defs>
+          <path d="M62.916804101354785 529.9676544637541 A380 380, 0, 1, 1, 777.0831958986453 529.9676544637541" id="curvedTextPath" fill="none"></path>
+        </defs>
+
+        <text>
+          <textPath startOffset="6%" id="control-link-wrap" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#curvedTextPath">
+            <tspan data-country="belgium">belgium</tspan>
+            <tspan data-country="bulgaria">bulgaria</tspan>
+            <tspan data-country="canada">canada</tspan>
+            <tspan data-country="denmark">denmark</tspan>
+            <tspan data-country="england">england</tspan>
+            <tspan data-country="france">france</tspan>
+            <tspan data-country="gibraltar">gibraltar</tspan>
+            <tspan data-country="ireland">ireland</tspan>
+            <tspan data-country="macedonia">macedonia</tspan>
+            <tspan data-country="netherlands">the netherlands</tspan>
+            <tspan data-country="poland">poland</tspan>
+            <tspan data-country="ukraine">ukraine</tspan>
+            <tspan data-country="usa">USA</tspan>
+          </textPath>
+        </text>
+      </svg>
+    </div>
 
     <script src="js/vendor/jquery-1.11.2.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
