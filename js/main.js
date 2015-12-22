@@ -131,8 +131,9 @@ $(document).ready(function(){
     items: 1,
     startPosition: startPosition,
     URLhashListener: true,
-    animateIn: "rotateInUpLeft",
-    animateOut: "rotateOutUpLeft",
+    // rotateInUpLeft rotateOutUpLeft
+    animateIn: "rollIn",
+    animateOut: "rollOut",
     onInitialized: function() {
 //      $(".owl-carousel .item .top").addClass('animated bounceInLeft');
     }
@@ -159,5 +160,5 @@ $(document).ready(function(){
 $(window).load(function () {
   document.getElementById("bg-song").play();
   $(".snowman").fadeOut();
-  $(".owl-carousel .owl-item.active .item .top").addClass('animated bounceInLeft');
+  $(".owl-carousel .owl-item.active .item .top").addClass('animated rollIn');
 });
